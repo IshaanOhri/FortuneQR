@@ -1,0 +1,62 @@
+{
+  "project_info": {
+    "project_number": "653390326324",
+    "firebase_url": "https://fortune-qr-f009f.firebaseio.com",
+    "project_id": "fortune-qr-f009f",
+    "storage_bucket": "fortune-qr-f009f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:653390326324:android:6e9dbadfd0fbc061",
+        "android_client_info": {
+          "package_name": "com.sarveshsbibhuty.fortuneqr"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "653390326324-4iqg9phrcagoak6457uvhdj18p55vdpj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.sarveshsbibhuty.fortuneqr",
+            "certificate_hash": "b6c366149d98dc5f60f7e4f8dad17e050eb9805b"
+          }
+        },
+        {
+          "client_id": "653390326324-5sohc14c64lb1j99feee0s83n7g90qjn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCCtw2O1LfiO9ySkAMIjamt8-FjTIsEDUg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "653390326324-5sohc14c64lb1j99feee0s83n7g90qjn.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "653390326324-plactn5ipge50q8cmpkslg9um91okrns.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "Sarvad-Shetty.Fortune-QR"
+              }
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
