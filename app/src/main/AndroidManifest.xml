@@ -10,18 +10,24 @@
         android:roundIcon="@mipmap/camerabutton"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
-        <activity android:name=".team_code" />
-        <activity android:name=".team_reg" />
-        <activity android:name=".qrscanner" />
-        <activity android:name=".splash">
+        <activity android:name=".team_code"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".team_reg"
+            android:screenOrientation="portrait" />
+        <activity android:name=".qrscanner"
+            android:screenOrientation="portrait" />
+        <activity android:name=".splash"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".endgame" />
-        <activity android:name=".aboutus"></activity>
+        <activity android:name=".endgame"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".aboutus"
+            android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>
