@@ -8,6 +8,22 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="Button" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:background">@drawable/background_button</item>
+        <item name="android:backgroundTint">@color/colorButton</item>
+        <item name="android:height">65dp</item>
+        <item name="android:radius">15dp</item>
+        <item name="android:textColor">@color/colorButtonText</item>
+        <item name="android:textSize">18dp</item>
+    </style>
+
+    <style name="Button2" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:backgroundTint">@color/colorWhite</item>
+        <item name="android:height">60dp</item>
+        <item name="android:radius">15dp</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:textSize">16dp</item>
+    </style>
 
 
 </resources>

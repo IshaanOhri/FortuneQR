@@ -1,3 +1,23 @@
 <resources>
     <string name="app_name">Fortune QR</string>
+
+    <string name="AboutUs">ABOUT US</string>
+    <string name="todo">TODO</string>
+    <string name="ADG">Apple Developers Group</string>
+    <string name="VV">VIT VELLORE</string>
+    <string name="audesc">Apple Developers Group (ADG) is a name synonymous with excellence, simplicity and dedication. It is a registered student community at VIT, Vellore established under the Apple University program. A coterie of talented minds seeking not just success but perfection. The mentors and the members here, join hands in successfully pulling off a hack-a-thon such as Hackgrid and engaging workshops like iOS Fusion and Unidev. Hackgrid encourages young developers to come up with scintillating technical solutions to real world problems. iOS Fusion aims at giving a hands on experience of iOS app development to all the tech enthusiasts whereas Unidev takes future developers into realm of augmented reality</string>
+    <string name="OurApps">Our Apps</string>
+    <string name="OurEvents">Our Events</string>
+    <string name="Iosf">Ios Fusion</string>
+    <string name="unidev">Unidev</string>
+    <string name="hackgrid">Hackgrid</string>
+    <string name="name">NAME</string>
+    <string name="email">Email</string>
+    <string name="regNo">Reg. No.</string>
+    <string name="logout">Logout</string>
+    <string name="privacyPolicy">Privacy Policy</string>
+    <string name="contactUs">Contact Us</string>
+    <string name="contactInfo">Email ID \nappledevelopersgroup@gmail.com\n\nSarvesh Bhibhuti\n+91-9099946404</string>
+    <string name="call">Call Us Now</string>
+    <string name="back">Go Back</string>
 </resources>

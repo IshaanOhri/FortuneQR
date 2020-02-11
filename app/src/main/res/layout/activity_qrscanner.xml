@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -39,7 +40,7 @@
         app:layout_constraintTop_toBottomOf="@+id/time" />
 
 
-    <android.support.v7.widget.CardView
+    <androidx.cardview.widget.CardView
 
         android:id="@+id/cardView1"
         android:layout_width="315dp"
@@ -73,13 +74,10 @@
             android:layout_height="130dp"
             android:layout_marginLeft="18dp"
             android:layout_marginTop="50dp"
-            android:text="Here is your hint."
-            android:textColor="#FFFFFF"
+            android:text="Scan the QR to get your first hint."
+            android:textColor="#FFFFFF"/>
 
-
-            />
-
-    </android.support.v7.widget.CardView>
+    </androidx.cardview.widget.CardView>
 
 
     <Button
@@ -99,4 +97,4 @@
 
 
 
-</android.support.constraint.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

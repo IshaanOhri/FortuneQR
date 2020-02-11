@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 
-<android.support.constraint.ConstraintLayout
+<androidx.constraintlayout.widget.ConstraintLayout
 
 
     xmlns:android="http://schemas.android.com/apk/res/android"
@@ -43,9 +43,8 @@
 
     <TextView
         android:id="@+id/upcome"
-        android:layout_width="175dp"
+        android:layout_width="wrap_content"
         android:layout_height="25dp"
-
         android:layout_marginBottom="29dp"
         android:layout_marginEnd="118dp"
         android:layout_marginStart="118dp"
@@ -59,17 +58,18 @@
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
 
-    <android.support.v7.widget.CardView
+    <androidx.cardview.widget.CardView
         android:id="@+id/cardView4"
-        android:layout_width="350dp"
-        android:layout_height="250dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
         android:layout_marginBottom="47dp"
-        android:layout_marginEnd="31dp"
+        app:cardBackgroundColor="#404040"
         app:cardCornerRadius="15dp"
         app:cardElevation="4dp"
         app:cardMaxElevation="6dp"
-        android:layout_marginStart="30dp"
-        app:cardBackgroundColor="#404040"
         app:layout_constraintBottom_toTopOf="@+id/endgame"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -80,9 +80,9 @@
             android:id="@+id/hack"
             android:layout_width="131dp"
             android:layout_height="48dp"
-            android:layout_marginBottom="3dp"
-            android:layout_marginEnd="140dp"
             android:layout_marginStart="110dp"
+            android:layout_marginEnd="140dp"
+            android:layout_marginBottom="3dp"
             android:paddingTop="10dp"
             android:text="HACKGRID"
             android:textColor="#FFF"
@@ -93,23 +93,20 @@
         <TextView
             android:id="@+id/textView2"
             android:layout_width="320dp"
-
             android:layout_height="239dp"
             android:layout_marginLeft="15dp"
-
-
-            android:paddingTop="50dp"
+            android:paddingTop="20dp"
             android:text="It's that time of the year again. If a caffeine fuelled coding marathon is your idea of a perfect night, and if the word hack puts a smile on your face, you're in for a treat!
 HackGrid '19 will give you the platform and coffee you need so that you can focus on what you do best - CODE!
 What are you waiting for?\n
 HackGrid.register();"
-
+            android:gravity="center"
             android:textAlignment="center"
             android:textColor="#FFFFFF"
             android:textSize="15dp" />
 
 
-    </android.support.v7.widget.CardView>
+    </androidx.cardview.widget.CardView>
 
 
     <Button
@@ -126,4 +123,4 @@ HackGrid.register();"
         app:layout_constraintTop_toBottomOf="@+id/cardView4" />
 
 
-</android.support.constraint.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

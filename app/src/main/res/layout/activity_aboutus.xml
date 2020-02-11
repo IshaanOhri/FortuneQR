@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<androidx.constraintlayout.widget.ConstraintLayout
 
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -10,224 +10,469 @@
     tools:context=".aboutus"
     tools:layout_editor_absoluteY="25dp">
 
-    <TextView
-        android:id="@+id/about"
-        android:layout_width="115dp"
-        android:layout_height="36dp"
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-        android:layout_marginBottom="19dp"
-        android:layout_marginEnd="122dp"
-        android:layout_marginStart="123dp"
-        android:layout_marginTop="16dp"
-        android:text="About Us"
-        android:textColor="#F7324D"
-        android:textSize="25dp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/imageView3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="18dp"
-        android:layout_marginEnd="37dp"
-        android:layout_marginStart="37dp"
-        android:src="@mipmap/adgmod"
-        app:layout_constraintBottom_toTopOf="@+id/theteam"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/about" />
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="30dp"
+                android:text="@string/AboutUs"
+                android:textColor="#F73240"
+                android:textSize="33dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TabHost
+                android:id="@+id/tabHost"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TabWidget
+                        android:id="@android:id/tabs"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginHorizontal="20dp"
+                        android:background="@drawable/tab_background"
+                        android:padding="2dp" />
+
+                    <FrameLayout
+                        android:id="@android:id/tabcontent"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginHorizontal="20dp">
+
+                        <LinearLayout
+                            android:id="@+id/tab1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <androidx.core.widget.NestedScrollView
+                                android:id="@+id/Scrollview3"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:id="@+id/constraintLayout2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent">
+
+                                    <androidx.cardview.widget.CardView
+                                        android:id="@+id/AboutCard1"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="20dp"
+                                        app:cardCornerRadius="12dp"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent">
+
+                                        <androidx.constraintlayout.widget.ConstraintLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:background="#404040">
+
+                                            <ImageView
+                                                android:id="@+id/AUADGlogo"
+                                                android:layout_width="67dp"
+                                                android:layout_height="46dp"
+                                                android:layout_marginStart="16dp"
+                                                android:layout_marginLeft="16dp"
+                                                android:layout_marginTop="16dp"
+                                                android:contentDescription="@string/todo"
+                                                android:src="@drawable/adg_logo"
+                                                app:layout_constraintStart_toStartOf="parent"
+                                                app:layout_constraintTop_toTopOf="parent" />
+
+                                            <TextView
+                                                android:id="@+id/AUADG"
+                                                android:layout_width="0dp"
+                                                android:layout_height="27dp"
+                                                android:layout_marginStart="30dp"
+                                                android:layout_marginLeft="30dp"
+                                                android:layout_marginTop="16dp"
+                                                android:text="@string/ADG"
+                                                android:textColor="#FFFFFF"
+                                                android:textSize="18sp"
+                                                app:layout_constraintEnd_toEndOf="parent"
+                                                app:layout_constraintHorizontal_bias="0.0"
+                                                app:layout_constraintStart_toEndOf="@+id/AUADGlogo"
+                                                app:layout_constraintTop_toTopOf="parent" />
+
+                                            <TextView
+                                                android:id="@+id/AUVV"
+                                                android:layout_width="0dp"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginStart="30dp"
+                                                android:layout_marginLeft="30dp"
+                                                android:text="@string/VV"
+                                                android:textColor="#1ACB80"
+                                                android:textSize="14sp"
+                                                android:textStyle="bold"
+                                                app:layout_constraintEnd_toEndOf="parent"
+                                                app:layout_constraintHorizontal_bias="0.0"
+                                                app:layout_constraintStart_toEndOf="@+id/AUADGlogo"
+                                                app:layout_constraintTop_toBottomOf="@+id/AUADG" />
+
+                                            <TextView
+                                                android:id="@+id/AUdesc"
+                                                android:layout_width="0dp"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginStart="16dp"
+                                                android:layout_marginTop="10dp"
+                                                android:layout_marginEnd="16dp"
+                                                android:layout_marginBottom="10dp"
+                                                android:text="@string/audesc"
+                                                android:textColor="@color/colorWhite"
+                                                android:textSize="16sp"
+                                                app:layout_constraintBottom_toBottomOf="parent"
+                                                app:layout_constraintEnd_toEndOf="parent"
+                                                app:layout_constraintStart_toStartOf="parent"
+                                                app:layout_constraintTop_toBottomOf="@+id/AUVV"
+                                                app:layout_constraintVertical_bias="1.0" />
+                                        </androidx.constraintlayout.widget.ConstraintLayout>
+                                    </androidx.cardview.widget.CardView>
+
+                                    <androidx.cardview.widget.CardView
+                                        android:id="@+id/AboutCard2"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="20dp"
+                                        app:cardCornerRadius="12dp"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toBottomOf="@+id/AboutCard1">
+
+                                        <androidx.constraintlayout.widget.ConstraintLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:background="#404040">
+
+                                            <TextView
+                                                android:id="@+id/auOurApps"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginStart="16dp"
+                                                android:layout_marginTop="16dp"
+                                                android:text="@string/OurApps"
+                                                android:textColor="@color/colorWhite"
+                                                android:textSize="18sp"
+                                                android:textStyle="bold"
+                                                app:layout_constraintStart_toStartOf="parent"
+                                                app:layout_constraintTop_toTopOf="parent" />
+
+                                            <ImageView
+                                                android:id="@+id/imtap"
+                                                android:layout_width="50dp"
+                                                android:layout_height="50dp"
+                                                android:layout_marginStart="16dp"
+                                                android:layout_marginLeft="16dp"
+                                                android:layout_marginTop="15dp"
+                                                android:layout_marginBottom="10dp"
+                                                android:contentDescription="@string/todo"
+                                                android:src="@drawable/taplogo"
+                                                app:layout_constraintBottom_toBottomOf="parent"
+                                                app:layout_constraintStart_toStartOf="parent"
+                                                app:layout_constraintTop_toBottomOf="@+id/auOurApps" />
+
+                                            <ImageView
+                                                android:id="@+id/impap"
+                                                android:layout_width="50dp"
+                                                android:layout_height="50dp"
+                                                android:layout_marginStart="20dp"
+                                                android:layout_marginLeft="20dp"
+                                                android:layout_marginTop="15dp"
+                                                android:layout_marginBottom="10dp"
+                                                android:contentDescription="@string/todo"
+                                                android:src="@drawable/paperlogo"
+                                                app:layout_constraintBottom_toBottomOf="parent"
+                                                app:layout_constraintStart_toEndOf="@+id/imtap"
+                                                app:layout_constraintTop_toBottomOf="@+id/auOurApps" />
+
+                                            <ImageView
+                                                android:id="@+id/imtp"
+                                                android:layout_width="60dp"
+                                                android:layout_height="60dp"
+                                                android:layout_marginStart="20dp"
+                                                android:layout_marginLeft="2dp"
+                                                android:layout_marginTop="15dp"
+                                                android:layout_marginBottom="10dp"
+                                                android:contentDescription="@string/todo"
+                                                android:src="@drawable/tplogo"
+                                                app:layout_constraintBottom_toBottomOf="parent"
+                                                app:layout_constraintStart_toEndOf="@+id/impap"
+                                                app:layout_constraintTop_toBottomOf="@+id/auOurApps" />
+
+                                        </androidx.constraintlayout.widget.ConstraintLayout>
+                                    </androidx.cardview.widget.CardView>
+
+                                    <androidx.cardview.widget.CardView
+                                        android:id="@+id/AboutCard3"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="20dp"
+                                        android:layout_marginBottom="10dp"
+                                        app:cardCornerRadius="12dp"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toBottomOf="@+id/AboutCard2">
+
+                                        <androidx.constraintlayout.widget.ConstraintLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:background="#404040">
 
 
-    <TextView
-        android:id="@+id/theteam"
-        android:layout_width="127dp"
-        android:layout_height="31dp"
+                                            <TextView
+                                                android:id="@+id/auOurEvents"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginStart="16dp"
+                                                android:layout_marginTop="16dp"
+                                                android:text="@string/OurEvents"
+                                                android:textColor="@color/colorWhite"
+                                                android:textSize="18sp"
+                                                android:textStyle="bold"
+                                                app:layout_constraintStart_toStartOf="parent"
+                                                app:layout_constraintTop_toTopOf="parent" />
 
-        android:layout_marginBottom="60dp"
-        android:layout_marginEnd="127dp"
-        android:layout_marginStart="128dp"
-        android:text="THE TEAM"
-        android:textColor="#FFF8F0"
-        android:textSize="25dp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/textView3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+                                            <LinearLayout
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginStart="15dp"
+                                                android:layout_marginLeft="15dp"
+                                                android:layout_marginTop="15dp"
+                                                android:layout_marginBottom="10dp"
+                                                android:orientation="horizontal"
+                                                app:layout_constraintBottom_toBottomOf="parent"
+                                                app:layout_constraintStart_toStartOf="parent"
+                                                app:layout_constraintTop_toBottomOf="@+id/auOurEvents">
 
-    <TextView
-        android:id="@+id/android"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="15dp"
-        android:layout_marginEnd="167dp"
-        android:layout_marginStart="167dp"
-        android:layout_marginTop="64dp"
-        android:text="ANDROID"
-        android:textColor="#FFF8F0"
-        android:textSize="18dp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/textView3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+                                                <LinearLayout
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:gravity="center"
+                                                    android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="168dp"
-        android:layout_height="19dp"
-        android:layout_marginBottom="3dp"
-        android:layout_marginEnd="122dp"
-        android:layout_marginStart="121dp"
-        android:text="Sarvesh Saurav Bibhuty"
-        android:textColor="#FFF"
-        android:textSize="15dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView6"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/android" />
+                                                    <ImageView
+                                                        android:id="@+id/imiosf"
+                                                        android:layout_width="32dp"
+                                                        android:layout_height="32dp"
+                                                        android:contentDescription="@string/todo"
+                                                        android:src="@drawable/ic_iosf_logo"
+                                                        app:layout_constraintStart_toStartOf="parent"
+                                                        app:layout_constraintTop_toBottomOf="@+id/auOurEvents" />
 
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:layout_height="22dp"
-        android:layout_marginBottom="3dp"
-        android:layout_marginEnd="165dp"
-        android:layout_marginStart="164dp"
-        android:text="Parth Tejani"
-        android:textColor="#FFF"
-        android:textSize="15dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView7"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+                                                    <TextView
+                                                        android:id="@+id/auiftv"
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="wrap_content"
+                                                        android:text="@string/Iosf"
+                                                        android:textSize="11dp"
+                                                        android:textColor="@color/colorWhite"
+                                                        android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/textView7"
-        android:layout_width="99dp"
-        android:layout_height="21dp"
-        android:layout_marginBottom="15dp"
-        android:layout_marginEnd="156dp"
-        android:layout_marginStart="156dp"
-        android:text="Abhishek Jha"
-        android:textColor="#FFF"
-        android:textSize="15dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView8"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+                                                </LinearLayout>
 
+                                                <Space
+                                                    android:layout_width="30dp"
+                                                    android:layout_height="wrap_content" />
 
-    <TextView
-        android:id="@+id/textView8"
-        android:layout_width="35dp"
-        android:layout_height="28dp"
-        android:layout_marginBottom="15dp"
-        android:layout_marginEnd="188dp"
-        android:layout_marginStart="188dp"
-        android:text="iOS"
-        android:textColor="#FFF8F0"
-        android:textSize="18dp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/textView11"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+                                                <LinearLayout
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:gravity="center"
+                                                    android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/textView9"
-        android:layout_width="94dp"
-        android:layout_height="21dp"
-        android:layout_marginBottom="3dp"
-        android:layout_marginEnd="159dp"
-        android:layout_marginStart="158dp"
-        android:text="Tushar Singh"
-        android:textColor="#FFF"
-        android:textSize="15dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView10"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView11" />
+                                                    <ImageView
+                                                        android:id="@+id/imud"
+                                                        android:layout_width="32dp"
+                                                        android:layout_height="32dp"
+                                                        android:contentDescription="@string/todo"
+                                                        android:src="@drawable/ic_unidev_logo"
+                                                        app:layout_constraintStart_toEndOf="@+id/imiosf"
+                                                        app:layout_constraintTop_toBottomOf="@+id/auOurEvents" />
 
-    <TextView
-        android:id="@+id/textView10"
-        android:layout_width="106dp"
-        android:layout_height="20dp"
+                                                    <TextView
+                                                        android:id="@+id/auudtv"
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="wrap_content"
+                                                        android:text="@string/unidev"
+                                                        android:textSize="11dp"
+                                                        android:textColor="@color/colorWhite"
+                                                        android:textStyle="bold" />
 
-        android:layout_marginBottom="15dp"
-        android:layout_marginEnd="153dp"
-        android:layout_marginStart="152dp"
-        android:text="Pratik Pattanaik"
-        android:textColor="#FFF"
-        app:layout_constraintBottom_toTopOf="@+id/textView12"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+                                                </LinearLayout>
 
+                                                <Space
+                                                    android:layout_width="30dp"
+                                                    android:layout_height="wrap_content" />
 
-    <TextView
-        android:id="@+id/textView11"
-        android:layout_width="101dp"
-        android:layout_height="22dp"
-        android:layout_marginBottom="3dp"
-        android:layout_marginEnd="155dp"
-        android:layout_marginStart="155dp"
-        android:text="Sarvad Shetty"
-        android:textColor="#FFF"
-        android:textSize="15dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView9"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+                                                <LinearLayout
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:gravity="center"
+                                                    android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/textView12"
-        android:layout_width="64dp"
-        android:layout_height="25dp"
-        android:layout_marginBottom="14dp"
-        android:layout_marginEnd="174dp"
-        android:layout_marginStart="173dp"
-        android:text="DESIGN"
-        android:textColor="#FFF8F0"
-        android:textSize="18dp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/textView13"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+                                                    <ImageView
+                                                        android:id="@+id/imhg"
+                                                        android:layout_width="32dp"
+                                                        android:layout_height="32dp"
+                                                        android:contentDescription="@string/todo"
+                                                        android:src="@drawable/ic_hackgrid_logo"
+                                                        app:layout_constraintStart_toEndOf="@+id/imud"
+                                                        app:layout_constraintTop_toBottomOf="@+id/auOurEvents" />
 
-    <TextView
-        android:id="@+id/textView13"
-        android:layout_width="121dp"
-        android:layout_height="25dp"
-        android:layout_marginBottom="20dp"
-        android:layout_marginEnd="145dp"
-        android:layout_marginStart="145dp"
-        android:text="Aditya Srivastava"
-        android:textColor="#FFF"
-        android:textSize="15dp"
-        app:layout_constraintBottom_toTopOf="@+id/privacy"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView12" />
+                                                    <TextView
+                                                        android:id="@+id/auhgtv"
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="wrap_content"
+                                                        android:text="@string/hackgrid"
+                                                        android:textSize="11dp"
+                                                        android:textStyle="bold"
+                                                        android:textColor="@color/colorWhite"
+                                                        app:layout_constraintBottom_toBottomOf="parent"
+                                                        app:layout_constraintStart_toEndOf="@id/auudtv"
+                                                        app:layout_constraintTop_toBottomOf="@+id/imhg"
+                                                        app:layout_constraintVertical_bias="0.0" />
 
-    <TextView
-        android:id="@+id/privacy"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:layout_marginEnd="163dp"
+                                                </LinearLayout>
+                                            </LinearLayout>
+                                        </androidx.constraintlayout.widget.ConstraintLayout>
+                                    </androidx.cardview.widget.CardView>
 
-        android:layout_marginStart="162dp"
-        android:text="Privacy Policy"
-        android:textColor="#FFFFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView13" />
+                                </androidx.constraintlayout.widget.ConstraintLayout>
 
-</android.support.constraint.ConstraintLayout>
+                            </androidx.core.widget.NestedScrollView>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/tab2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="20dp"
+                                android:src="@drawable/akshit"/>
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:src="@drawable/ishaan"/>
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:src="@drawable/navdeep"/>
+
+                        </LinearLayout>
+
+                    </FrameLayout>
+
+                </LinearLayout>
+
+            </TabHost>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/privacyPolicy"
+                android:layout_width="175dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                app:cardCornerRadius="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tabHost">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#404040"
+                    android:paddingVertical="5dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="15dp"
+                        android:paddingVertical="5dp"
+                        android:text="@string/privacyPolicy"
+                        android:textAlignment="center"
+                        android:textColor="#F73240"
+                        android:textSize="14dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/contactUs"
+                android:layout_width="175dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                app:cardCornerRadius="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tabHost">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#404040"
+                    android:paddingVertical="5dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="15dp"
+                        android:paddingVertical="5dp"
+                        android:text="@string/contactUs"
+                        android:textAlignment="center"
+                        android:textColor="#F73240"
+                        android:textSize="14dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

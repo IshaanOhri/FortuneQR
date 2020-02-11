@@ -5,9 +5,10 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Handler;
 import android.preference.PreferenceManager;
-import android.support.annotation.NonNull;
-import android.support.v7.app.AppCompatActivity;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
@@ -143,7 +144,7 @@ public class qrscanner extends AppCompatActivity {
                 integrator.setDesiredBarcodeFormats(IntentIntegrator.ALL_CODE_TYPES);
                 integrator.setPrompt("Scan");
                 integrator.setCameraId(0);
-                integrator.setBeepEnabled(false);
+                integrator.setBeepEnabled(true);
                 integrator.setBarcodeImageEnabled(false);
                 integrator.initiateScan();
 
@@ -156,12 +157,10 @@ public class qrscanner extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                if(Integer.parseInt(qrid)%9==0)
+                if(Integer.parseInt(qrid)% 7 == 0)
                 {
                     Intent i = new Intent(qrscanner.this, endgame.class);
                     startActivity(i);
-
-
                 }
                 else
                 {
@@ -200,9 +199,16 @@ public class qrscanner extends AppCompatActivity {
                     int qrcode = Integer.parseInt(qrid);
                     int qrcod;
 
+                    Log.i("INFO","Clues: " + clues);
+                    Log.i("INFO","N: " + String.valueOf(n));
+                    Log.i("INFO","ID: " + id);
+                    Log.i("INFO","Question: " + question);
+                    Log.i("INFO","num: " + num);
+                    Log.i("INFO","QR Code: " + qrcode);
+
                     if(qrcode==0)
                     {
-                        qrcod= num%9;
+                        qrcod= num% 7;
                     }
                     else
                     {

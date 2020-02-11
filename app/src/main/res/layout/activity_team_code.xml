@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<androidx.constraintlayout.widget.ConstraintLayout
 
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -38,7 +38,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/fortune" />
 
-    <android.support.v7.widget.CardView
+    <androidx.cardview.widget.CardView
 
         android:id="@+id/cardView"
         android:layout_width="290dp"
@@ -64,7 +64,7 @@
             android:backgroundTint="#FFFFFF"
             android:drawableLeft="@mipmap/edit"
             android:hint="  Team ID"
-            android:inputType="text"
+            android:inputType="number"
             android:maxLines="1"
             android:paddingLeft="10dp"
             android:textColor="#FFFFFF"
@@ -73,7 +73,7 @@
             android:textCursorDrawable="@null" />
 
 
-    </android.support.v7.widget.CardView>
+    </androidx.cardview.widget.CardView>
 
 
     <Button
@@ -89,4 +89,4 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView" />
 
-</android.support.constraint.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
